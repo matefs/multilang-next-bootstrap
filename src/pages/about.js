@@ -1,4 +1,3 @@
-// pages/index.js
 
 import { useContext } from "react";
 import AppContext from "../AppContext";
@@ -6,19 +5,17 @@ import AppContext from "../AppContext";
 import { Container } from "react-bootstrap";
 import Navigation from "../components/Navigation";
 
-export default function Home() {
+export default function About() {
   const value = useContext(AppContext);
-  let { homeTitle, homeContent } = value.state.languages;
+  let { aboutTitle, aboutContent } = value.state.languages;
 
   return (
     <>
       <Navigation />
       <Container className="page">
-        <h2>{homeTitle}</h2>
-        <p>{homeContent}</p>
+        <h2>{aboutTitle}</h2>
+        <p>{aboutContent}</p>
       </Container>
     </>
   );
 }
-
-/*https://www.techomoro.com/how-to-use-context-api-in-a-next-js-app/ */ 
